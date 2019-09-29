@@ -1,20 +1,39 @@
 <html>
-<head>
-    <title>picamera MJPEG streaming demo</title>
-</head>
-<body>
-    <header>
-        <h1>PiCamera MJPEG Streaming Demo</h1>
-        <img src="stream.mjpg" width="640" height="480" />
-    </header>
-    <main>
-        <buttons>
-            <button class="up"></button>
-            <button class="down"></button>
-            <button class="left"></button>
-            <button class="right"></button>
+    <head>
+        <title>Black Box Car</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="/script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>BBC (Black Box Car, get your mind out of the gutter)</h1>
+            <img src="stream.mjpg"/>
+        </header>
+
+        <div class="content">
+            <div class="lcd">
+                <label for="LCD-input">LCD Display:</label>
+                <input name="LCD-input" size="16" maxlength="16" placeholder="Enter Message"> 
+            </div>
+                
+            <div class="buttons">
+                <button id="up" onclick="btn-up" href="">
+                    <img src="/svg/arrow-up.svg"/>
+                </button>
+                <button id="down" onclick="btn-down" href="">
+                    <img src="/svg/arrow-down.svg"/>
+                </button>   
+                <button id="left" onclick="btn-left" href="">
+                    <img src="/svg/arrow-left.svg"/>
+                </button>
+                <button id="right" onclick="btn-right" href="">
+                    <img src="/svg/arrow-right.svg"/>
+                </button>
+
+            </div>
             
-        </buttons>
-    </main>
-</body>
+        </div>
+        
+    </body>
 </html>
