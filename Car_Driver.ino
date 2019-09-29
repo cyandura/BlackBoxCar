@@ -31,8 +31,8 @@ void setup() {
 
 void loop() {
   if (Serial.available() > 0){          
-    incoming = Serial.readString();
-    incoming = incoming.substring(0,incoming.length()-2);
+    incoming = Serial.readStringUntil('\n');
+    Serial.println(incoming);
   }
   
   if(incoming.length() <= 1) {

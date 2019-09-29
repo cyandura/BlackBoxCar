@@ -1,0 +1,63 @@
+html{
+    overflow-y: hidden;
+}
+body{
+    margin: 1% 2% 0 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+body img{
+    width: 93%;
+    height: 76%;
+}
+
+header{
+    float: left;
+    width: 75%;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    float: right;
+    height: 100vh;
+    width: 25%;    
+    margin: 2% 2%;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 150px;
+    width: 400px;
+    
+}
+#up{
+    grid-column: 2 / 3;
+    grid-row: 1;
+
+}
+
+#left{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    
+}
+#right{
+    grid-column: 3 / 3;
+    grid-row: 2;
+}
+#down{
+    grid-column: 2 / 3;
+    grid-row: 2;
+
+}
+
+.pressed{
+    background-color: rgb(28, 218, 37);
+}
+.lcd{
+    margin-bottom: 10%;
+}
