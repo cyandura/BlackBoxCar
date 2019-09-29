@@ -3,37 +3,48 @@
         <title>Black Box Car</title>
         <link rel="stylesheet" href="styles.css">
         <script src="/script.js"></script>
+        <!-- Roboto Font from google fonts -->
+        <!-- https://fonts.google.com/specimen/Roboto  -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" rel="stylesheet">
     </head>
-
+    
+    
     <body>
-        <header>
-            <h1>BBC (Black Box Car, get your mind out of the gutter)</h1>
-            <img src="stream.mjpg"/>
-        </header>
-
-        <div class="content">
-            <div class="lcd">
-                <label for="LCD-input">LCD Display:</label>
-                <input name="LCD-input" size="16" maxlength="16" placeholder="Enter Message"> 
-            </div>
-                
-            <div class="buttons">
-                <button id="up" onclick="btn-up" href="">
-                    <img src="/svg/arrow-up.svg"/>
-                </button>
-                <button id="down" onclick="btn-down" href="">
-                    <img src="/svg/arrow-down.svg"/>
-                </button>   
-                <button id="left" onclick="btn-left" href="">
-                    <img src="/svg/arrow-left.svg"/>
-                </button>
-                <button id="right" onclick="btn-right" href="">
-                    <img src="/svg/arrow-right.svg"/>
-                </button>
-
-            </div>
+        <h1>Black Box Car</h1>
+        <div class="wrapper">
+                <header>
             
+                    <!-- <iframe src="http://172.20.10.9:8000/stream.mjpg" width="600" height="400" frameborder="0"></iframe> -->
+                    <img src="http://172.20.10.9:8000/stream.mjpg"></img>
+                    
+                </header>
+        
+                <div class="content">
+                    <div class="lcd">
+                        <label for="LCD-input">LCD Display:</label>
+                        <input name="LCD-input" size="16" maxlength="16" placeholder="Enter Message"> 
+                        <p>Currently on screen: <span class="display-text">Hello World</span></p>
+                    </div>
+                        
+                    <div class="buttons">
+                        <button id="up" onclick="btn-up" href="">
+                            <img src="/svg/arrow-up.svg"/>
+                        </button>
+                        <button id="down" onclick="btn-down" href="">
+                            <img src="/svg/arrow-down.svg"/>
+                        </button>   
+                        <button id="left" onclick="btn-left" href="">
+                            <img src="/svg/arrow-left.svg"/>
+                        </button>
+                        <button id="right" onclick="btn-right" href="">
+                            <img src="/svg/arrow-right.svg"/>
+                        </button>
+        
+                    </div>
+                    
+                </div>
         </div>
+        
         
     </body>
 </html>
