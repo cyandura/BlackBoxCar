@@ -15,7 +15,7 @@
                 <header>
             
                     <!-- <iframe src="http://172.20.10.9:8000/stream.mjpg" width="600" height="400" frameborder="0"></iframe> -->
-                    <img src="http://172.20.10.9:8000/stream.mjpg"></img>
+                    <img src="http://192.168.43.219:8000/stream.mjpg"></img>
                     
                 </header>
         
@@ -23,20 +23,21 @@
                     <div class="lcd">
                         <label for="LCD-input">LCD Display:</label>
                         <input name="LCD-input" size="16" maxlength="16" placeholder="Enter Message"> 
+                        <input type="submit" class="enter" placeholder="Enter">
                         <p>Currently on screen: <span class="display-text">Hello World</span></p>
                     </div>
                         
                     <div class="buttons">
-                        <button id="up" onclick="btn-up" href="">
+                        <button id="up" onclick="btn-up" href="up">
                             <img src="/svg/arrow-up.svg"/>
                         </button>
-                        <button id="down" onclick="btn-down" href="">
+                        <button id="down" onclick="btn-down" href="/down">
                             <img src="/svg/arrow-down.svg"/>
                         </button>   
-                        <button id="left" onclick="btn-left" href="">
+                        <button id="left" onclick="btn-left" href="/left">
                             <img src="/svg/arrow-left.svg"/>
                         </button>
-                        <button id="right" onclick="btn-right" href="">
+                        <button id="right" onclick="btn-right" href="/right">
                             <img src="/svg/arrow-right.svg"/>
                         </button>
         
