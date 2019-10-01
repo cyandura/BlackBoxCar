@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Black Box Car</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="/script.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+iosocket = io.connect();
+iosocket.on('onconnection', () => {});
+	</script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Black Box Car</h1>
+            <!-- <iframe src="http://172.20.10.9:8000/stream.mjpg" width="600" height="400" frameborder="0"></iframe> -->
+            <img src="http://35.50.58.105:8000/stream.mjpg"></img>
+            
+        </header>
+
+        <div class="content">
+            <div class="lcd">
+                <label for="LCD-input">LCD Display:</label>
+                <input name="LCD-input" size="16" maxlength="16" placeholder="Enter Message"> 
+            </div>
+                
+            <div class="buttons">
+                <button id="up" onclick="iosocket.emit('buttonClk','1\n')" href="/up">
+                    <img src="/svg/arrow-up.svg"/>
+                </button>
+                <button id="down" onclick="iosocket.emit('buttonClk','4\n')" href="/down">
+                    <img src="/svg/arrow-down.svg"/>
+                </button>   
+                <button id="left" onclick="iosocket.emit('buttonClk','2\n')" href="/left">
+                    <img src="/svg/arrow-left.svg"/>
+                </button>
+                <button id="right" onclick="iosocket.emit('buttonClk','3\n')" href="/right">
+                    <img src="/svg/arrow-right.svg"/>
+                </button>
+
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
